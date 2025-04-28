@@ -11,6 +11,8 @@ public void handlingWebelementsCommands()
 	WebElement messagebox=driver.findElement(By.xpath("//input[@id='single-input-field']"));
 	messagebox.sendKeys("hello");//to send or enter values 
 	WebElement showmessagebutton=driver.findElement(By.xpath("//button[@id='button-one']"));
+	//System.out.println(showmessagebutton.isDisplayed());
+	System.out.println(showmessagebutton.isEnabled());
 	showmessagebutton.click();//to click button
 	WebElement yourmessage=driver.findElement(By.xpath("//div[@id='message-one']"));
 	System.out.println(yourmessage.getText());//to get the text from the field

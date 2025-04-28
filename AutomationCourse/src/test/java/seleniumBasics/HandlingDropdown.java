@@ -12,8 +12,8 @@ public void handlingDropdown()
 WebElement java=driver.findElement(By.id("dropdowm-menu-1"));
 //java.click();
 Select select=new Select(java);
-//select.selectByIndex(2);
-select.selectByVisibleText("SQL");
+select.selectByIndex(2);
+//select.selectByVisibleText("SQL");
 //select.selectByValue("c#");
 }
 	public static void main(String[] args) 
