@@ -5,6 +5,8 @@ import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -24,9 +26,9 @@ public class ExcelUtility {
 
 		s = w.getSheet(sheet);
 
-		Row r = s.getRow(i);
+		XSSFRow r = s.getRow(i);
 
-		Cell c = r.getCell(j);
+		XSSFCell c = r.getCell(j);
 
 		return c.getStringCellValue();
 	}
@@ -37,8 +39,8 @@ public class ExcelUtility {
 				"C:\\Users\\NITHYA R NAIR\\git\\Automationcourse\\AutomationCourse\\src\\test\\resources\\TestData.xlsx");
 		w = new XSSFWorkbook(f);
 		s = w.getSheet(sheet);
-		Row r = s.getRow(i);
-		Cell c = r.getCell(j);
+		XSSFRow r = s.getRow(i);
+		XSSFCell c = r.getCell(j);
 		int value = (int) c.getNumericCellValue();
 		return String.valueOf(value);
 	}
